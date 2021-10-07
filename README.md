@@ -19,3 +19,6 @@ Thinking this was a bug with the age-related modifiers in balance.xml, I wanted 
 
 ### The third fix
 In the end, the solution is to **directly modify or replace** the game's files rather than implement changes at the local-mod level, although a completed version of Unshitfuckeryfier might still be able to be used in conjunction with that solution.
+
+### The thid bug
+It turns out that, in short, having ANY DATA FILES LOADED FROM THE LOCAL MODS FOLDER (and maybe from workshop mods too?) triggers the bug in the first place to happen *only for the first game in any given session*. In a RoN:EE install with no externally-modded data files, the bug actually never appears. This can be worked around by ensuring you treat external data files like STIs. To be clear, "data files" means files that are loaded as if they're in RoN's /Data/ folder. Otherwise-identical files in different locations won't be loaded (so they're fine), and dropdown mods (which don't auto-load) also seemingly won't trigger the bug.
